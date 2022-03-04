@@ -1,0 +1,133 @@
+/*-------===================-------*/
+/* RESPONSIVE FOR 1024PX*/
+/*-------===================-------*/
+
+@media only screen and (max-width:1024px) {
+    .mobile-menu span{
+        display: block;
+    }
+    header{
+        height: 70vh;
+    }
+    .row{
+        margin: 0 15px;
+    }
+    .hero-text-box{
+        width: 90%;
+    }
+    .main-nav{
+        display: none;
+    }
+   
+    .client-photo {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .client-review {
+    width: 100%;
+    float: none;
+    text-align: center;
+    }
+    .client-review p{
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    .contact-section form{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/*-------===================-------*/
+/* RESPONSIVE FOR 980PX*/
+/*-------===================-------*/
+
+@media only screen and (max-width:980px){
+
+    .span_1_of_4 {
+        width: 49.2%; 
+    }
+    .span_1_of_4:nth-child(3) {
+        margin-left: 0;
+    }
+    .box p {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+      .services-section .box h3{ 
+        font-size: 2rem;
+      }
+      .team-section .box p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: justify;
+        width: 300px;
+        margin:1rem auto;
+      }
+      .testimonial-section .box p {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        width: 300px;
+        color: #fff;
+        margin: 1rem auto;
+      }
+      
+}
+/*-------===================-------*/
+/* RESPONSIVE FOR 768PX*/
+/*-------===================-------*/
+
+@media only screen and (max-width:768px){
+
+    .portfolio-section .span_1_of_2{
+        width: 100%;
+    }
+    .little-description {
+        width:100%;
+        margin-left: 0;
+      }
+    .box p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      .services-section .box h3{ 
+        font-size: 1.5rem;
+      }
+      .testimonial-section .box p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .footer-section li a {
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 400;
+      }     
+}
+/*-------===================-------*/
+/* RESPONSIVE FOR 480PX*/
+/*-------===================-------*/
+
+@media only screen and (max-width:480px){
+
+     .span_1_of_4{
+        width: 100%;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .portfolio-filter button{
+        font-size: 1rem;
+    }
+
+}
+/*-------===================-------*/
+/* RESPONSIVE FOR 390PX*/
+/*-------===================-------*/
+
+@media only screen and (max-width:390px){
+
+    h2{
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,612 @@
+/*-------===================-------*/
+/* BASIC SETUP*/
+/*-------===================-------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size:80.5% ;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 1.5rem;
+}
+ul li{
+    list-style-type:none;
+}
+h1{
+    font-size: 30px;
+    color: #fff;
+}
+
+
+/*-------===================-------*/
+/* REUSABLE COMPONENTS*/
+/*-------===================-------*/
+
+.row{
+    max-width: 1140px;
+    margin:0 auto;
+}
+/*===BUTTON===*/
+.btn:link,
+.btn:visited
+.btn{
+    background-color: #333;
+    border-bottom: 1px solid #643a79;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 60px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 50px;
+}
+section{
+    padding: 6rem 0;
+}
+/*  ====HEADING====*/
+h2{
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+h2::after{
+    content: "";
+    display: block;
+    height: .4rem;
+    background:#fff;
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+h3{
+    font-size:1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+h4{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+.box{
+    padding: 1%;
+}
+.box p{
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    color: #fff;
+}
+/*=======PARAGRAPH======*/
+.little-description{
+    font-size: 1.5rem;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 2rem;
+}
+
+
+/*-------===================-------*/
+/* HEADER SECTION*/
+/*-------===================-------*/
+
+header{
+    background:linear-gradient(#87509ce7,#87509ce7), url(img/services-bg.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 85vh;
+    position: relative;
+}
+
+.logo{
+    height: 35px;
+    width: auto;
+    margin-top: 30px;
+    float: left;
+}
+/*===MAIN NAVIGATION====*/
+.main-nav{
+    float: right;
+    margin-top:40px ;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: .3rem;
+}
+.main-nav li:first-child{
+    margin-left: 0;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #643a7900;
+    padding: .4rem .7rem;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 16px;
+    transition: .5s;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    background-color: #643a79;
+    color:#eb7d4b;
+    transform: scale(1.1);
+}
+/*==========STICKY NAV==========*/
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #87509cd5;
+    padding: .7rem 0;
+    box-shadow: 0 .6rem .2rem #9b9797e8;
+    z-index: 9999;
+}
+.sticky .logo{
+    margin-top: 0;
+}
+.sticky .main-nav{
+    margin-top: .5rem;
+}
+
+/*========MOBILE MENU========*/
+.mobile-menu span{
+    color: #fff;
+    float: right;
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+    display: none;
+}
+.sticky .mobile-menu span{
+    margin-top: 0;
+}
+.mobile-menu span:hover{
+    cursor: pointer;
+}
+.overlay{
+    width: 0;
+    height: 100%;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden; 
+    transition: .6s;
+}
+.overlay-content{
+    position: relative;
+    top:20%;
+    width: 100%;
+    text-align: center;
+}
+.overlay a{
+    text-decoration: none;
+    display:block;
+    font-size: 3rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    padding: .7rem 0;
+}
+.overlay-content a:hover {
+    color: #fff;
+}
+.overlay .closebtn{
+    position: relative;
+    color: #fff;
+    top: 3.5rem;
+    left: 3rem;
+    font-size: 4rem;
+   
+}
+
+/*.active{
+    background-color: #643a79;
+    border-radius: 4px; 
+}*/
+
+.hero-text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.btn-hero:link,
+.btn-hero:visited,
+.btn-hero{ 
+    background-color:#eb7d4b;
+    border-bottom: 1px solid #c86a40;
+    color: #fff;
+    
+}
+.btn-hero:hover{
+    background: linear-gradient(to right, #fc4a1a, #f7b733);
+    cursor: pointer;
+}
+
+/*-------===================-------*/
+/* SERVICES SECTION*/
+/*-------===================-------*/
+.services-section{
+    color: #fff;
+    background:linear-gradient(#17c2a3d2,#17c2a3d2),url(img/service2.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    text-align: center;
+}
+
+.services-section h2::after{
+    background: #02f7ce;
+}
+.services-icon{
+    height: 8rem;
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+}
+/*-------===================-------*/
+/* TEAM SECTION*/
+/*-------===================-------*/
+.team-section{
+    background:linear-gradient(#e7f1f8d8,#e7f1f8d8),url(img/our-team-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+.team-section h2{
+    color:#3c4761;
+}
+.team-section h2::after{
+    background: #0f4063;
+}
+.team-member{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+    
+}
+.team-section.little-description{
+    color:#3c4761;
+}
+.team-section h3{
+    color: #27283d;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.role{
+    color: #30bae7;
+    font-size: 1rem;
+    margin-top: .6rem;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.team-section p{
+    color: #47526b;
+    margin-top: 1rem;
+}
+.social-link{
+    margin-top: 3rem;
+}
+.social-link ul li{
+    display:inline-block;
+    margin: 0 .5rem;
+}
+.social-link ul li a{
+    color: #fff;
+    
+}
+
+.social-link ul li a i::before{
+    font-size: 1rem;
+    background: linear-gradient(to right, #fc5c7d, #6a82fb); 
+    width: 1rem;
+    height: 1rem;
+    padding: .5rem;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 1s;
+}
+.social-link ul li a:hover i::before{
+    background: linear-gradient(to right, #000000, #434343);
+    transform:rotate(360deg);
+}
+/*-------===================-------*/
+/* SKILL SECTION*/
+/*-------===================-------*/
+.skill-section{
+    background:linear-gradient(#ffffffd5,#ffffffd5),url(img/skill-bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    text-align: center;
+    color: #27283d;
+}
+.skill-section h2{
+    color: #27283d;
+}
+.skill-section h2::after{
+    background: #0d7970;
+}
+.skill-section p{
+    color: #47526b;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.skill-section.box{
+    margin-top: 4.5rem;
+}
+svg.radial-progress circle{
+    stroke-width: 8;
+}
+svg.radial-progress text{
+    fill: #27283d;
+    font-size: 1rem;
+}
+svg.web-design circle{
+    stroke: #30bae7;
+}
+svg.html-css circle{
+    stroke: #d74680;
+}
+svg.grapich-design circle{
+    stroke: #15c7a8;
+}
+svg.ui-ux circle{
+    stroke: #eb7d4b;
+}
+/*-------===================-------*/
+/* PORTFOLIO SECTION*/
+/*-------===================-------*/
+.portfolio-section{
+    background:linear-gradient(#ffdd99b9,#ffdd99b9),url(img/our-portfolio-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: #27283d;
+}
+.portfolio-section .little-description{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.portfolio-section h2{
+    color: #3c4761;
+}
+.portfolio-section h4{
+    color: #46443f;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.portfolio-section h2::after{
+    background: #e5c37f;
+}
+.portfolio-filter{
+    margin:3rem 0;
+}
+.portfolio-filter button{
+    background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+    font-size: 1.5rem;
+    color: #fff; 
+    text-transform: uppercase;
+    padding:.7rem 1.5rem;
+    margin: 0 .5rem;
+    border: none;
+    border-radius: .5rem;
+    transition: .5s;
+}
+.portfolio-filter button:hover{
+    box-shadow:inset 0 .5rem .5rem #3c4761ef ;
+}
+.portfolio-image{
+    width: 100%;
+    height: auto;
+}
+.portfolio-section .col:nth-child(3){
+    margin-left: 0;
+}
+.portfolio-section .btn-load-more{
+    background: #17c2a4;
+    border-color:#14a58c;
+    color: #fff;
+    margin: .5rem 1rem;
+}
+.portfolio-section .mixitup-control-active{
+    background: #FF8C00;
+   
+}
+/*-------===================-------*/
+/* TESTIMONIAL SECTION*/
+/*-------===================-------*/
+.testimonial-section{
+    background:linear-gradient(#d746808f,#d746808f),url(img/testimonial.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.testimonial-section .little-description{
+    text-align: center;
+    margin-bottom: 3rem;
+    color:#fff;
+    font-size: 1.2rem;
+}
+.testimonial-section .col:nth-child(3){
+    margin-left: 0;
+}
+.testimonial-section .col:nth-child(1),
+.testimonial-section .col:nth-child(2){
+    margin-top:4rem;
+}
+.testimonial-section .col:nth-child(3),
+.testimonial-section .col:nth-child(4){
+    margin-top:3rem;
+}
+.client-photo{
+    width: 7rem;
+    float: left;
+}
+.client-photo img{
+    height: 6rem;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+.client-review{
+    width: 25rem;
+}
+.client-review p{
+    color: #fff;
+    font-size: 1rem;
+    text-align: justify;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: .8rem;
+}
+.client-review h3{
+    color: #fff;
+    font-weight: 600;
+}
+.client-review .role{
+    color:#ffdd99;
+    font-size: 1rem;
+}
+
+/*-------===================-------*/
+/* CONTACT SECTION*/
+/*-------===================-------*/
+.contact-section{
+    background:linear-gradient(#3c5399a2,#3c5399a2),url(img/Contract.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+}
+.contact-section h2::after{
+    background: #aa4b6b;
+}
+.contact-section .little-description{
+    color: #fff;
+    font-size: .9rem;
+    text-align: center;
+}
+.contact-section form{
+    margin-top: 3rem;
+    width: 70%;
+    margin-left: 15%;
+}
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea{
+    background: #273a71;
+    width: 100%;
+    border: .1rem solid #273a71;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    color: #fff;
+    margin: .5rem 0;
+}
+.contact-section textarea{
+    height: 10.5rem;
+    font-style: italic;
+}
+.contact-section form ::-webkit-input-placeholder{
+    color: #fff;
+    opacity: .5;
+}
+.contact-section form ::-moz-placeholder{
+    color: #fff;
+    opacity: .5;
+}
+.contact-section form :-ms-input-placeholder{
+    color: #fff;
+    opacity: .5;
+}
+.contact-section form ::-ms-input-placeholder{
+    color: #fff;
+    opacity: .5;
+}
+.contact-section form ::placeholder{
+    color: #fff;
+    opacity: .5;
+}
+.submit-btn1{
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 20px;
+    margin-top: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    display: inline-block;
+    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease-out;
+
+}
+.submit-btn1:hover {
+    color: #333;
+}
+/*-------===================-------*/
+/* FOOTER SECTION*/
+/*-------===================-------*/
+.footer-section{
+    border-top: .1rem solid #434343;
+    background: #344b8e;
+    text-align: center;
+    padding: 2rem 0;
+}
+.footer-section li{
+    display: inline-block;
+    margin: 0 2rem;
+}
+.footer-section li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.footer-section li a:hover{
+    color: #30b4e2;
+    transform: scale(1.1);
+}
+
+.copyright{
+    margin-top: 3rem;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.copyright a{
+    text-decoration: none;
+    color: #fff;
+}
